@@ -7,8 +7,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,8 +19,13 @@ import { PartialContainerComponent } from './components/partial-container/partia
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { CardComponent } from './components/card/card.component';
+import { produtosService } from './../services/produtos/produtos.service';
 import { ProductsComponent } from './pages/products/products.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from "@angular/forms";
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+
 
 
 
@@ -54,12 +61,19 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     FlexLayoutModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    ReactiveFormsModule,
     [RouterModule.forRoot(routes,
       {enableTracing: true}
       )],
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [
+    produtosService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

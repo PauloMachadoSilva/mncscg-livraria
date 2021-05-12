@@ -33,3 +33,13 @@ h1.example-app-name {
 .example-container .sidenav-content {
   margin: 16px;
 }
+.mat-icon-menu {
+  margin: 0px 16px 0px 0;
+}
+mat-sidenav {
+  width: 200px;
+  background-color: #ececec;
+}
+.mat-toolbar.mat-primary {
+  background-color: #000;
+}

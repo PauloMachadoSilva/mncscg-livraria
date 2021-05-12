@@ -1,0 +1,23 @@
+.spinner {
+    display: table;
+    margin: 0 auto;
+
+}
+
+@media (min-width: 640px) {
+    mat-card {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+mat-form-field {
+    width: 100%;
+}
+.action-button {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px !important;
+}
+button {
+    width: 100%;
+}
