@@ -24,6 +24,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
+import {MatMenuModule} from '@angular/material/menu';
+
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
@@ -34,7 +36,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  {path: '', component: ProductsComponent,},
+  {path: '', component: LoginComponent,},
   // {path: '**', component: PaginaNaoEncontradaComponent}
 ];
 
@@ -65,6 +67,7 @@ const routes: Routes = [
     MatProgressSpinnerModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatMenuModule,
     [RouterModule.forRoot(routes,
       {enableTracing: true}
       )],
