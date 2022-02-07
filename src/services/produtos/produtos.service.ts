@@ -22,13 +22,13 @@ export class produtosService {
     }
 
     /**
-     * Consultando Servicos na UMBLER, retornando JSON Ge
+     * Consultando Servicos na Servidor, retornando JSON Ge
      * @author Paulo Eduardo - pauloems@yahoo.com.br
      */
     consultaProdutos(){
         return this
             ._httpClient
-            .get(`http://agenciap2mk.com.br/api/adm_aniversariantes.php/aniversariantes/`, httpOptions)
+            .get(`http://agenciap2mk.com.br/api-mncs/produtos.php/produtos/`, httpOptions)
     }
 
    
